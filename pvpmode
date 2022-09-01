@@ -1,4 +1,4 @@
-local DMGItem1, DMGSlot1 = 3089, SlotFinger
+local DMGItem1, DMGSlot1 = 3098, SlotFinger
 local DMGItem2, DMGSlot2 = 14921, SlotNeck
 
 local DefItem1, DefSlot1 = 3098, SlotFinger
