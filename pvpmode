@@ -1,14 +1,14 @@
-local DMGItem1, DMGSlot1 = 3089, SlotNeck
-local DMGItem2, DMGSlot2 = 14921, SlotFinger
+local DMGItem1, DMGSlot1 = 3089, SlotFinger
+local DMGItem2, DMGSlot2 = 14921, SlotNeck
 
 local DefItem1, DefSlot1 = 3098, SlotFinger
 local DefItem2, DefSlot2 = 12507, SlotNeck
 
-local SpeedItem1, SpeedSlot1 = 12511, SlotNeck
-local SpeedItem2, SpeedSlot2 = 3097, SlotFinger
+local SpeedItem1, SpeedSlot1 = 12511, SlotFinger
+local SpeedItem2, SpeedSlot2 = 3097, SlotNeck
 
-local SetupItem1, SetupSlot1 = 0, SlotNeck
-local SetupItem2, SetupSlot2 = 3089, SlotFinger
+local SetupItem1, SetupSlot1 = 0, SlotFinger
+local SetupItem2, SetupSlot2 = 3089, SlotNeck
 
 -- NAO MEXER ABAIXO
 -- DON'T CHANGE BELOW
