@@ -1,6 +1,14 @@
-local HpItem, HpSlot = 3331, SlotNeck
-local DefItem, DefSlot = 4441, SlotFinger
-local SpeedItem, SpeedSlot = 5551, SlotNeck
+local DMGItem1, DMGSlot1 = 3331, SlotNeck
+local DMGItem2, DMGSlot2 = 3331, SlotFinger
+
+local DefItem1, DefSlot1 = 4441, SlotFinger
+local DefItem2, DefSlot2 = 4441, SlotNeck
+
+local SpeedItem1, SpeedSlot1 = 5551, SlotNeck
+local SpeedItem2, SpeedSlot2 = 5551, SlotFinger
+
+local SetupItem1, SetupSlot1 = 5551, SlotNeck
+local SetupItem2, SetupSlot2 = 5551, SlotFinger
 
 -- NAO MEXER ABAIXO
 -- DON'T CHANGE BELOW
@@ -10,7 +18,7 @@ if type(storage.uzu) ~= "table" then
 end
 
 local function indexUpValue()
-  storage.uzu.index = (not storage.uzu.index or storage.uzu.index < 3) and storage.uzu.index + 1 or 1;
+  storage.uzu.index = (not storage.uzu.index or storage.uzu.index < 4) and storage.uzu.index + 1 or 1;
   return storage.uzu.index;
 end
 
@@ -19,21 +27,31 @@ uzu.label = UI.Label()
 uzu.label:setFont("verdana-11px-rounded")
 
  uzu.HpMode = function()
-    uzu.label:setText("MODE: HP")
+    uzu.label:setText("MODE: DMG")
     uzu.label:setColor("red")
-    moveToSlot(HpItem, HpSlot)
+    moveToSlot(DMGItem1, DMGSlot1)
+    moveToSlot(DMGItem2, DMGSlot2)
 end
 
 uzu.SpeedMode = function()
     uzu.label:setText("MODE: Speed")
     uzu.label:setColor("blue")
-    moveToSlot(SpeedItem, SpeedSlot)
+    moveToSlot(SpeedItem1, SpeedSlot1)
+    moveToSlot(SpeedItem2, SpeedSlot2)
 end
 
 uzu.DefMode = function()
     uzu.label:setText("MODE: Defesa")
     uzu.label:setColor("yellow")
-    moveToSlot(DefItem, DefSlot)
+    moveToSlot(DefItem1, DefSlot1)
+    moveToSlot(DefItem2, DefSlot2)
+end
+
+ uzu.SetupMode = function()
+    uzu.label:setText("MODE: NEUTRO")
+    uzu.label:setColor("pink")
+    moveToSlot(SetupItem1, SetupSlot1)
+    moveToSlot(SetupItem2, SetupSlot2)
 end
 
 macro(100, function()
@@ -43,8 +61,10 @@ macro(100, function()
         uzu.HpMode()
     elseif index == 2 then
          uzu.DefMode()
-    else
+    elseif index == 3 then
         uzu.SpeedMode()
+    else
+        uzu.SetupMode()
     end
 end)
 
