@@ -1,0 +1,53 @@
+local HpItem, HpSlot = 3331, SlotNeck
+local DefItem, DefSlot = 4441, SlotFinger
+local SpeedItem, SpeedSlot = 5551, SlotNeck
+
+-- NAO MEXER ABAIXO
+-- DON'T CHANGE BELOW
+
+if type(storage.uzu) ~= "table" then
+    storage.uzu = {index = 0,}
+end
+
+local function indexUpValue()
+  storage.uzu.index = (not storage.uzu.index or storage.uzu.index < 3) and storage.uzu.index + 1 or 1;
+  return storage.uzu.index;
+end
+
+local uzu = {}
+uzu.label = UI.Label()
+uzu.label:setFont("verdana-11px-rounded")
+
+ uzu.HpMode = function()
+    uzu.label:setText("MODE: HP")
+    uzu.label:setColor("red")
+    moveToSlot(HpItem, HpSlot)
+end
+
+uzu.SpeedMode = function()
+    uzu.label:setText("MODE: Speed")
+    uzu.label:setColor("blue")
+    moveToSlot(SpeedItem, SpeedSlot)
+end
+
+uzu.DefMode = function()
+    uzu.label:setText("MODE: Defesa")
+    uzu.label:setColor("yellow")
+    moveToSlot(DefItem, DefSlot)
+end
+
+macro(100, function()
+    if not storage.uzu.index then return end
+    local index = storage.uzu.index
+    if index == 1 then
+        uzu.HpMode()
+    elseif index == 2 then
+         uzu.DefMode()
+    else
+        uzu.SpeedMode()
+    end
+end)
+
+UI.Button("change mode", function()
+    indexUpValue()
+end)
