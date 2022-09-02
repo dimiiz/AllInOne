@@ -8,7 +8,7 @@ local SpeedItem1, SpeedSlot1 = 3097, SlotFinger
 local SpeedItem2, SpeedSlot2 = 12511, SlotNeck
 
 local SetupItem1, SetupSlot1 = 3052, SlotFinger
-local SetupItem2, SetupSlot2 = 0, SlotNeck
+local SetupItem2, SetupSlot2 = 14929, SlotNeck
 
 -- NAO MEXER ABAIXO
 -- DON'T CHANGE BELOW
