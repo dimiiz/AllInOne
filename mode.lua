@@ -30,6 +30,7 @@ local uzu = {}
  uzu.HpMode = function()
     belial:setText("DAMAGE")
     belial:setColor("red")
+    belial:setBackgroundColor("white")
     moveToSlot(DMGItem1, DMGSlot1)
     moveToSlot(DMGItem2, DMGSlot2)
 end
