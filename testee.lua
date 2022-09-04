@@ -1,4 +1,4 @@
-setDefaultTab("Batt")
+setDefaultTab(":)")
 Jump = {}
 Jump.Pos = {x = 0, y = 0, z = 0}
 local distance = getDistanceBetween(Jump.Pos, pos())
