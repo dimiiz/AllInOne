@@ -157,7 +157,6 @@ AlarmsWindow < MainWindow
   color: green
   size: 300 300
   @onEscape: self:hide()
-  image-source: /imagens/alarme
 
   BotSwitch
     id: playerAttack
@@ -1050,7 +1049,6 @@ menPanel < Panel
   margin-bottom: 17
   layout:
     type: verticalBox
-  image-source: /imagens/x_x2
 
 MensagemWindow < MainWindow
   !text: tr('- MENSAGEM -')
@@ -1359,7 +1357,6 @@ ExtrasCheckBox < BotSwitch
 
 ExtrasWindow < MainWindow
   !text: tr('Scripts')
-  image-source:
   font: verdana-11px-rounded
   color: green
   size: 460 360
@@ -1442,7 +1439,6 @@ ExtrasWindow < MainWindow
 
   HorizontalSeparator
     id: separator
-    image-source: /imagens/botxd2
     height: 16
     anchors.right: parent.right
     anchors.left: parent.left
@@ -2696,7 +2692,6 @@ end
 local hpalvo = setupUI([[
 
 Panel
-  image-source: /imagens/target
   anchors.horizontalCenter: parent.horizontalCenter
   anchors.top: parent.top
   height: 68
@@ -3268,7 +3263,6 @@ cPanel < Panel
   margin-bottom: 17
   layout:
     type: verticalBox
-  image-source: /imagens/x_x2
 
 cmbComboWindow < MainWindow
   !text: tr('- COMBO -')
@@ -3828,7 +3822,6 @@ hpPanel < Panel
   margin-bottom: 17
   layout:
     type: verticalBox
-  image-source: /imagens/painel
 
 PainelWindow < MainWindow
   !text: tr('- PAINEL -')
@@ -6707,7 +6700,6 @@ tsPanel < Panel
   margin-bottom: 17
   layout:
     type: verticalBox
-  image-source: /imagens/timespell
 
 timeSpellWindow < MainWindow
   !text: tr('- TIME SPELL -')
@@ -7394,7 +7386,6 @@ croPanel < Panel
   margin-bottom: 17
   layout:
     type: verticalBox
-  image-source: /imagens/combo
 
 cronometroWindow < MainWindow
   !text: tr('- CRONOMETRO -')
@@ -7544,7 +7535,6 @@ g_ui.loadUIFromString([[
 
 MusicaWindow < MainWindow
   !text: tr('Musicas\n\n @Luiz ')
-  image-source: /imagens/x_xmusica
   font: verdana-11px-rounded
   size: 440 360
   padding: 25
@@ -7646,7 +7636,6 @@ MusicaWindow < MainWindow
 
   HorizontalSeparator
     id: separator
-    image-source: /imagens/botxd2
     height: 16
     anchors.right: parent.right
     anchors.left: parent.left
@@ -8072,7 +8061,6 @@ ViajeWindow < MainWindow
       layout:
         type: verticalBox
         fit-children: true
-    image-source: /imagens/x_x
 
     Panel
       id: right
@@ -8462,7 +8450,6 @@ CidadesWindow < MainWindow
       layout:
         type: verticalBox
         fit-children: true
-    image-source: /imagens/x_x3
 
     Panel
       id: right
@@ -8968,7 +8955,6 @@ configPanel < Panel
   margin-bottom: 17
   layout:
     type: verticalBox
-  image-source: /imagens/x_x2
 
 ConfigWindow < MainWindow
   !text: tr('- Configuracao -')
@@ -10051,7 +10037,6 @@ UI.Separator()
 
 warn("Bem-Vindo a Custom 1.9\nby: @Luiz")
 zzf = modules.game_bot.contentsPanel
-zzf:setImageSource("/imagens/alarme")
 
 modules.game_textmessage.displayStatusMessage('@Luiz')
 
