@@ -1359,7 +1359,7 @@ ExtrasCheckBox < BotSwitch
 
 ExtrasWindow < MainWindow
   !text: tr('Scripts')
-  image-source: /imagens/scripts2
+  image-source:
   font: verdana-11px-rounded
   color: green
   size: 460 360
