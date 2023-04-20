@@ -4,7 +4,7 @@ local magias = {
 
 }
 
-macro(1, "Cast", function()
+macro(1, "Combos", function()
     for i, magia in pairs(magias) do 
         cast(i, magia)
     end
